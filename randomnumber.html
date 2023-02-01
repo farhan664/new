@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+      function checkNumber() {
+        let userInput = document.querySelector("input").value;
+        userInput = parseInt(userInput);
+
+        if (userInput === randomNumber) {
+          alert("Good Job");
+        } else {
+          alert("You missed");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Write a number between 0 to 10.</p>
+    <input type="text">
+    <button onclick="checkNumber()">Check</button>
+  </body>
+</html>
