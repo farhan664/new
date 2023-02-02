@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get Month</title>
+  </head>
+  <body>
+    <input type="text" id="monthInput">
+    <button onclick="getMonthValue()">Get Month</button>
+
+    <script>
+      function getMonth(month) {
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        if (!months.includes(month)) {
+          throw "Invalid month";
+        }
+        
+        return month;
+      }
+      
+      function getMonthValue() {
+        try {
+          var monthInput = document.getElementById("monthInput").value;
+          var result = getMonth(monthInput);
+          
+          alert("The month is: " + result);
+        } catch (error) {
+          alert("Error: " + error);
+        }
+      }
+    </script>
+  </body>
+</html>
