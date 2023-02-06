@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum of Odd Digits</title>
+        <script>
+            function sumOddDigits() {
+                let inputNumber = document.getElementById("inputNumber").value;
+                let total = 0;
+                let digits = inputNumber.toString().split("");
+                for (let i = 0; i < digits.length; i++) {
+                    if (parseInt(digits[i]) % 2 !== 0) {
+                        total += parseInt(digits[i]);
+                    }
+                }
+                document.getElementById("result").innerHTML = "Sum of odd digits: " + total;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label for="inputNumber">Enter a number greater than 5 digits:</label>
+            <input type="text" id="inputNumber"/>
+            <button onclick="sumOddDigits()">Submit</button>
+        </div>
+        <div id="result"></div>
+    </body>
+</html>

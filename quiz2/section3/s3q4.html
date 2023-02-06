@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+    <h1>Age Calculator</h1>
+    <p>Enter your date of birth: <input type="date" id="dob"></p>
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+      function calculate() {
+        let dob = new Date(document.getElementById("dob").value);
+        let today = new Date();
+        let ageInMilliseconds = today - dob;
+        let ageInSeconds = ageInMilliseconds / 1000;
+        let ageInMinutes = ageInSeconds / 60;
+        let ageInHours = ageInMinutes / 60;
+        let ageInDays = ageInHours / 24;
+        let ageInMonths = ageInDays / 30.44;
+        let ageInYears = ageInMonths / 12;
+        let ageYears = Math.floor(ageInYears);
+        let ageMonths = Math.floor(ageInMonths % 12);
+        let ageDays = Math.floor(ageInDays % 30.44);
+        document.getElementById("result").innerHTML = "You are " + ageYears + " years, " + ageMonths + " months, and " + ageDays + " days old.";
+      }
+    </script>
+  </body>
+
+
+</html>

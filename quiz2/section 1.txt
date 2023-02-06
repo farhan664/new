@@ -1,0 +1,13 @@
+	section 1
+1. a  Object Oriented 
+2. c  Both A and B
+3. b  By reference
+4. a  getElementById()
+5. a  const
+6. a  al
+7. a  20
+8. a  parts of a web page
+9. a  Modified
+10.a  Git remote add origin
+
+
